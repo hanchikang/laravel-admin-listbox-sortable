@@ -1,0 +1,33 @@
+{
+    "name": "ckhan/laravel-admin-listbox-sortable",
+    "description": "laravel admin listbox sortable",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension", "form", "listbox", "sortable"],
+    "homepage": "https://github.com/ckhan/laravel-admin-listbox-sortable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ckhan",
+            "email": "chikang@vip.qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CKHan\\ListboxSortable\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CKHan\\ListboxSortable\\ListboxSortableServiceProvider"
+            ]
+        }
+    }
+}
