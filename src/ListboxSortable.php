@@ -11,10 +11,4 @@ class ListboxSortable extends Extension
     public $views = __DIR__.'/../resources/views';
 
     public $assets = __DIR__.'/../resources/assets';
-
-    public $menu = [
-        'title' => 'Listboxsortable',
-        'path'  => 'laravel-admin-listbox-sortable',
-        'icon'  => 'fa-gears',
-    ];
 }

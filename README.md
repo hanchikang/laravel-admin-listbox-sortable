@@ -4,7 +4,7 @@ ListboxSortable是基于Laravel-admin表单组件的扩展，实现了listbox的
 ## Require
 - Laravel-admin >= 1.6
 
-##Installation
+## Installation
 运行下面的命令安装:
 
     "composer require  ckhan/laravel-admin-listbox-sortable"
