@@ -3,7 +3,7 @@
     "description": "laravel admin listbox sortable",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "form", "listbox", "sortable"],
-    "homepage": "https://github.com/ckhan/laravel-admin-listbox-sortable",
+    "homepage": "https://github.com/hanchikang/laravel-admin-listbox-sortable",
     "license": "MIT",
     "authors": [
         {
