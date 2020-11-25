@@ -844,6 +844,12 @@
             }
 
             refreshSelects(this);
+
+            this.sortIndex = this.element.find('option:selected').length;
+            triggerChangeEvent(this);
+            if(this.settings.sortByInputOrder){
+                sortOptionsByInputOrder(this.elements.select2);
+            }
         },
         destroy: function() {
             this.container.remove();

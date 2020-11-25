@@ -20,6 +20,10 @@ ListboxSortable是基于Laravel-admin表单组件的扩展，实现了listbox的
 ```php
 $form->listboxsortable($column[, $label])->options([1 => 'foo', 2 => 'bar', 'val' => 'Option name']);
 ``` 
+或者从api中获取选项：
+```php
+$form->listboxsortable($column[, $label])->options('/api/options');
+``` 
 ## Documentation
 Laravel-admin开发文档[Laravel-admin](https://laravel-admin.org/docs/zh/)
 ## License

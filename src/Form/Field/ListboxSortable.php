@@ -23,7 +23,43 @@ class ListboxSortable extends Listbox
     ];
 
     protected static $js = [
-        '/vendor/laravel-admin/bootstrap-duallistbox-sortable/jquery.bootstrap-duallistbox-sortable.min.js',
+        '/vendor/laravel-admin/bootstrap-duallistbox-sortable/jquery.bootstrap-duallistbox-sortable.min.js?t=2020112501',
         '/vendor/laravel-admin/bootstrap-duallistbox-sortable/Sortable.min.js',
     ];
+
+    /**
+     * @param string $url
+     * @param array $parameters
+     * @param array $options
+     * @return $this|Listbox|\Encore\Admin\Form\Field\MultipleSelect|\Encore\Admin\Form\Field\Select
+     */
+    protected function loadRemoteOptions($url, $parameters = [], $options = [])
+    {
+        $ajaxOptions = json_encode(array_merge([
+            'url' => $url.'?'.http_build_query($parameters),
+        ], $options));
+
+        $this->script = <<<EOT
+
+$.ajax($ajaxOptions).done(function(data) {
+
+  var listbox = $("{$this->getElementClassSelector()}");
+
+    var value = listbox.data('value') + '';
+
+    if (value) {
+      value = value.split(',');
+    }
+
+    for (var key in data) {
+        var selected =  ($.inArray(key, value) >= 0) ? 'selected data-sortindex='+value.indexOf(key) : '';
+        listbox.append('<option value="'+key+'" '+selected+'>'+data[key]+'</option>');
+    }
+
+    listbox.bootstrapDualListbox('refresh', true);
+});
+EOT;
+
+        return $this;
+    }
 }
