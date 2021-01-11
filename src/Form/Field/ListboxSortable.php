@@ -19,7 +19,7 @@ class ListboxSortable extends Listbox
 
     protected static $css = [
         '/vendor/laravel-admin/bootstrap-duallistbox/dist/bootstrap-duallistbox.min.css',
-        '/vendor/laravel-admin/bootstrap-duallistbox-sortable/bootstrap-duallistbox-sortable.min.css',
+        '/vendor/laravel-admin/bootstrap-duallistbox-sortable/bootstrap-duallistbox-sortable.min.css?t=2021011101',
     ];
 
     protected static $js = [
