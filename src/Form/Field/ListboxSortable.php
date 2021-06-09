@@ -1,12 +1,12 @@
 <?php
 
-namespace CKHan\ListboxSortable\Form\Field;
+namespace ckhan\ListboxSortable\Form\Field;
 
 use Encore\Admin\Form\Field\Listbox;
 
 /**
  * Class ListboxSortable
- * @package CKHan\ListboxSortable\Form\Field
+ * @package ckhan\ListboxSortable\Form\Field
  */
 class ListboxSortable extends Listbox
 {
