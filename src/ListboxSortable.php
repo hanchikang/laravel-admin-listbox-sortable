@@ -1,6 +1,6 @@
 <?php
 
-namespace CKHan\ListboxSortable;
+namespace ckhan\ListboxSortable;
 
 use Encore\Admin\Extension;
 
