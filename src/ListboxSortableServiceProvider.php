@@ -1,6 +1,6 @@
 <?php
 
-namespace CKHan\ListboxSortable;
+namespace ckhan\ListboxSortable;
 
 use Illuminate\Support\ServiceProvider;
 use Encore\Admin\Form;
@@ -25,7 +25,7 @@ class ListboxSortableServiceProvider extends ServiceProvider
         }
 
         $this->app->booted(function () {
-            Form::extend('listboxsortable', \CKHan\ListboxSortable\Form\Field\ListboxSortable::class);
+            Form::extend('listboxsortable', \ckhan\ListboxSortable\Form\Field\ListboxSortable::class);
         });
     }
 }
