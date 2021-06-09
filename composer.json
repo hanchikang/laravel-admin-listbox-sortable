@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "CKHan\\ListboxSortable\\": "src/"
+            "ckhan\\ListboxSortable\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "CKHan\\ListboxSortable\\ListboxSortableServiceProvider"
+                "ckhan\\ListboxSortable\\ListboxSortableServiceProvider"
             ]
         }
     }
